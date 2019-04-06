@@ -12,7 +12,10 @@ const tyrannosaurus = {
   "diet": "carnivorous",
   "weight": "7000kg",
   "length": "12m",
-  "period": "Late Cretaceious"
+  "period": "Late Cretaceious",
+  roar: function(){
+    return "RAWERSRARARWERSARARARRRR!";
+  }
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -47,7 +50,7 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(tyrannosaurus.roar());
 
 
 // ==== Arrays ====
@@ -69,6 +72,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+for (let n = 0; n < graduates.length; n++){
+  universities.push(graduates[n].university);
+}
+
+universities.sort();
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -78,11 +87,24 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+for (let n = 0; n < graduates.length; n++) {
+  aStudentsContactInfo = `${graduates[n].first_name} ${graduates[n].email}`;
+  contactInfo.push(aStudentsContactInfo);
+}
+
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for (let n = 0; n < graduates.length; n++) {
+  if (graduates[n].university.includes("Uni")){
+    uni.push(graduates[n].university);
+  }
+}
+
 console.log(uni);
 
 
