@@ -40,7 +40,9 @@ console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to
 
 // Explanation: 
 /*
-In short, 
+In short, the closure allows the scope of the variable within a function to be extended beyond that function.
+
+it's sorta like, not only is the skeleton of the function able to be invoked, but the context that function exists in.
 */
 
 
