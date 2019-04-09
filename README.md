@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+Map automatically returns an array, while forEach does not necessarily return anything. forEach can be called, for instance, to just display the elements of the array (e.g. a document.output or console.log for each element). 
+
 2. What is the difference between a function and a method?
+
+A method is just a function that belongs to an object.
 
 3. What is closure?
 
+It is a function, plus that function's lexical environment.
+
 4. Describe the four rules of the 'this' keyword.
 
+implicit, explicit, window, new 
+
+implicit: in an object, "this" refers to the object it's in
+window: the default this refers to the most broad, global thing, i.e. the window of the web browser it is being executed in 
+new: when an object is created, this refers to that 
+
 5. Why do we need super() in an extended class?
+
+super will refer to the "parent" class the class is extended from: it will have characteristics (e.g. variables and functions) it inherets from its parent, and super will invoke those
 
 ## Project Set up
 
